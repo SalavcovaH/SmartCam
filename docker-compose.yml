@@ -7,6 +7,8 @@ services:
       - ./backend:/app
     environment:
       - CHOKIDAR_USEPOLLING=true
+    devices:
+      - /dev/video0:/dev/video0
 
   frontend:
     build: ./frontend
