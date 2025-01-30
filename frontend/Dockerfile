@@ -1,5 +1,5 @@
 # frontend/Dockerfile
-FROM arm32v7/node:23
+FROM node:23
 
 WORKDIR /app
 
