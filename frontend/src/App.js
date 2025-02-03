@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './App.css';
+import CameraSettings from './CameraSettings';
 
 /* Testing app to show webcam stream, button in development*/
 const WebcamStream = () => {
@@ -42,7 +43,7 @@ const WebcamStream = () => {
   return (
     <div className="App">
       <div className="left-bar">
-        <button onClick={captureImage}>Video 1</button>
+        <button onClick={captureImage}>Capture image</button>
         <button>Video 2</button>
         <button>Video 3</button>
         {/* Display the fetched message */}
@@ -51,7 +52,12 @@ const WebcamStream = () => {
             <h1>Backend says:</h1>
             <p>{message}</p>
           </div>
+          
         )}
+        <div>
+        <h1>Camera Control</h1>
+        <CameraSettings />
+        </div>
       </div>
 
       <div className="right-stream">
